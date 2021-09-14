@@ -69,6 +69,12 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 
 ## Creating different URLs
 
+## Server Status
+
+## CRUD
+
+## Using Postman
+
 
 
 
