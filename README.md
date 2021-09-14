@@ -53,6 +53,7 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 ### GitHub
 1. Create new repo with app name
 2. Do not add readme or anything. 
+
 ### In Terminal
 1. git init
 2. git add .
@@ -64,7 +65,9 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 
 - 'git push' will throw an error
 - 'git push origin master' will push to your repo only once. You need to set the upstream to continually push.
-1. git push --set-upstream origin master
+5. git push --set-upstream origin master
+
+## Creating different URLs
 
 
 
