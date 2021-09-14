@@ -10,7 +10,13 @@ This is PRE-Express. Once we get to Express, this will not be steps needed to bu
 
 ## Overview
 
+### In Terminal
+1. Run  ‘nmp init’
+2. Change Entry Point to app.js
+3. Enter till asked if correct (yes)
+4. Touch app.js
 
+### In app.js
 
 ```javascript
 const http = require('http')
@@ -25,4 +31,8 @@ server.listen(port)
 console.log(`Server is now up and running @ port: ${port}`)
 ```
 
-You'll use this data file to get Jeopardy questions and answers.
+### In Terminal
+1. Run ‘node app.js’
+
+### Browser
+1. http://localhost:3000/
