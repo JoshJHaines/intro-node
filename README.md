@@ -6,6 +6,7 @@ This is PRE-Express. Once we get to Express, this will not be steps needed to bu
 
 * [Node](https://nodejs.org/en/download/)
 * [Nodemon](https://www.npmjs.com/package/nodemon)
+* [GitHub](https://www.github.com)
 
 
 ## Overview
@@ -43,6 +44,24 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 ### Browser
 1. http://localhost:3000/
 2. You should see a page with "hi class"
+
+
+## Create Git Repo
+
+### GitHub
+1. Create new repo with app name
+2. Do not add readme or anything. 
+### In Terminal
+1. git init
+2. git add .
+3. git commit -m "first commit"
+4. git remote add origin `copy the link from the new github repo`
+- 'git push' will throw an error
+- 'git push origin master' will push to your repo only once. You need to set the upstream to continually push.
+5. git push --set-upstream origin master
+
+
+
 
 
 [^1]: Running with node will require you to turn the server off with "CTRL C" and start the server each time you make changes. Using Nodemon will allow you to use the browser refresh button for changes to show.
