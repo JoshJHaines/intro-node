@@ -1,6 +1,8 @@
-const http = require('http')
+const http = require("http");
 
-const port = 3000
+const fs = require("fs");
+
+const port = 3000;
 
 // const server = http.createServer(function(request, response){
 //     response.end ("hi class")
@@ -11,17 +13,24 @@ const port = 3000
 //     response.end (JSON.stringify({text: "hello class", numbers: [1,2,3]}))
 // })
 
-const server = http.createServer(function(request, response){
-    console.log(request.url)
+const server = http.createServer(function (request, response) {
+	console.log(request.url);
 
-if (request.url === "/game"){
-    response.end("Check back later for games details")
-} else {
-    response.end()
-}
+	if (request.url === "/game") {
+		// response.end("Check back later for games details")
+		fs.readFile("./public/game.html", function (error, data) {
+			if (error) {
+				return response.end("something went wrong");
+			} else {
+				response.writeHead(200, { "Content-type": "text/html" });
+				response.write(data);
+				return response.end();
+			}
+		});
+	} else {
+		response.end();
+	}
+});
 
-    response.end()
-})
-
-server.listen(port)
-console.log(`Server is now up and running @ port: ${port}`)
+server.listen(port);
+console.log(`Server is now up and running @ port: ${port}`);
