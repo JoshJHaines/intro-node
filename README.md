@@ -41,6 +41,8 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 ### In Terminal
 1. Run ‘node app.js’[^1]
 
+[^1]: Running with node will require you to turn the server off with "CTRL C" and start the server each time you make changes. Using Nodemon will allow you to use the browser refresh button for changes to show.
+
 ### Browser
 1. http://localhost:3000/
 2. You should see a page with "hi class"
@@ -56,13 +58,15 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 2. git add .
 3. git commit -m "first commit"
 4. git remote add origin https://github.com/'USERNAME'/'repo-name'.git [^2]
+
+[^2]: You can copy the link needed for this straight from your empty GitHub repo page. 
+
+
 - 'git push' will throw an error
 - 'git push origin master' will push to your repo only once. You need to set the upstream to continually push.
-5. git push --set-upstream origin master
+1. git push --set-upstream origin master
 
 
 
 
 
-[^1]: Running with node will require you to turn the server off with "CTRL C" and start the server each time you make changes. Using Nodemon will allow you to use the browser refresh button for changes to show.
-[^2]: You can copy the link needed for this straight from your empty GitHub repo page. 
