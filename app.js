@@ -18,9 +18,9 @@ const server = http.createServer(function (request, response) {
 
 	if (request.url === "/game") {
 		// response.end("Check back later for games details")
-		fs.readFile("./public/game.html", function (error, data) {
+		fs.readFile("./public/game.htmls", function (error, data) {
 			if (error) {
-				return response.end("something went wrong");
+				return response.end(`${error}`);
 			} else {
 				response.writeHead(200, { "Content-type": "text/html" });
 				response.write(data);
