@@ -13,6 +13,13 @@ const port = 3000
 
 const server = http.createServer(function(request, response){
     console.log(request.url)
+
+if (request.url === "/games"){
+    response.end("Check back later for games details")
+} else {
+    response.end()
+}
+
     response.end()
 })
 
