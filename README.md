@@ -36,3 +36,4 @@ console.log(`Server is now up and running @ port: ${port}`)
 
 ### Browser
 1. http://localhost:3000/
+2. You should see a page with "hi class"
