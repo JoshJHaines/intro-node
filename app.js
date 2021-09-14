@@ -6,9 +6,14 @@ const port = 3000
 //     response.end ("hi class")
 // })
 
+// const server = http.createServer(function(request, response){
+//     response.setHeader("Content-Type", "application/json")
+//     response.end (JSON.stringify({text: "hello class", numbers: [1,2,3]}))
+// })
+
 const server = http.createServer(function(request, response){
-    response.setHeader("Content-Type", "application/json")
-    response.end (JSON.stringify({text: "hello class", numbers: [1,2,3]}))
+    console.log(request.url)
+    response.end()
 })
 
 server.listen(port)
