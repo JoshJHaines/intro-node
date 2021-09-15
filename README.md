@@ -39,7 +39,7 @@ console.log(`Server is now up and running @ port: ${port}`)
 This should give you what you need to have a sever and run it on port 3000 in your browser.
 
 ### In Terminal
-1. Run ‘node app.js’[^1]
+1. Run ‘node app.js’[^1] 
 
 
 ### Browser
@@ -57,7 +57,7 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 1. git init
 2. git add .
 3. git commit -m "first commit"
-4. git remote add origin https://github.com/'USERNAME'/'repo-name'.git [^2]
+4. git remote add origin https://github.com/'USERNAME'/'repo-name'.git [^2] 
 
 
 
@@ -108,9 +108,9 @@ if (request.url === "/" && request.method === "GET") {
 filled out soon
 
 
-[^1]:Running with node will require you to turn the server off with "CTRL C" and start the server each time you make changes. Using Nodemon will allow you to use the browser refresh button for changes to show.
+[^1]: Running with node will require you to turn the server off with "CTRL C" and start the server each time you make changes. Using Nodemon will allow you to use the browser refresh button for changes to show.
 
-[^2]:You can copy the link needed for this straight from your empty GitHub repo page. 
+[^2]: You can copy the link needed for this straight from your empty GitHub repo page. 
 
 [^3]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
 
