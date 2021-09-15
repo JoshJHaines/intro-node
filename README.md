@@ -66,16 +66,52 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 1. git push --set-upstream origin master
 
 ## Creating different URLs
-
+### In app.js
+``` javascript
+if (request.url === "/" && request.method === "GET") {
+		// response.end("Check back later for games details")
+		fs.readFile("text.txt", function (error, data) {
+			if (error) {
+				response.writeHead(400)
+				return response.end(`${error}`);
+			} else {
+				response.writeHead(200, { "Content-type": "text/html" });
+				response.write(data);
+				return response.end();
+			}
+		});
+	}
+```
+1. Create if statement with the 'request.url'. Adding the 'request.method' in the if statement makes it stronger.
+2. Inside the if statement, use node file share. 'fs.action' This could be readFile,writeFile,appendFile,[^3] etc.you will need to designate a path or specific file and declare a callback function with error & data in that order.
+3. Create another if statement to declare error. The writeHead should be 400 and return the error message.
+4. Create an else statement to return the data.
 ## Server Status
+
+- 200 - OK
+- 400 - Bad Request
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ## CRUD
 
+- Create
+  - POST
+- Read
+  - GET
+- Update
+  - PUT
+- Delete
+  - DELETE
+
 ## Using Postman
+
+filled out soon
 
 
 [^1]:Running with node will require you to turn the server off with "CTRL C" and start the server each time you make changes. Using Nodemon will allow you to use the browser refresh button for changes to show.
 
 [^2]:You can copy the link needed for this straight from your empty GitHub repo page. 
+
+[^3]: https://www.w3schools.com/nodejs/nodejs_filesystem.asp
 
 
