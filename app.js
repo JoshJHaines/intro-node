@@ -14,10 +14,12 @@ const port = 3000;
 // })
 
 const server = http.createServer(function (request, response) {
-	if (request.url === "/") {
+	console.log(request.method)
+	if (request.url === "/"&& request.method === "GET") {
 		// response.end("Check back later for games details")
 		fs.readFile("text.txt", function (error, data) {
 			if (error) {
+				response.writeHead(400)
 				return response.end(`${error}`);
 			} else {
 				response.writeHead(200, { "Content-type": "text/html" });
@@ -25,6 +27,61 @@ const server = http.createServer(function (request, response) {
 				return response.end();
 			}
 		});
+	}
+	if (request.url === "/create-file" && request.method === "POST"){
+		let body = ""
+
+		request.on("data", function (data){
+			body += data.toString()
+		})
+		
+		request.on("end", function(){
+			let parsedBody = JSON.parse(body)
+
+			fs.writeFile(parsedBody.fileName, parsedBody.message,function (error) {
+				if (error){
+					response.writeHead(400)
+					response.end(`${error}`)
+					response.end()
+				} else {
+					//default, if successful will show 200
+					// response.writeHead(200, { "Content-type": "text/html" });
+					console.log("created file")
+					response.end('Created File');
+				};
+			});
+			console.log(parsedBody)
+		})
+		
+	} 
+	if (request.url === "/update-file" && request.method === "PUT"){
+		let body = ""
+
+		request.on("data", function (data){
+			body = data.toString()
+		})
+		
+		request.on("end", function(){
+			let parsedBody = JSON.parse(body)
+
+			fs.appendFile(parsedBody.fileName, parsedBody.message,function (error) {
+				if (error){
+					response.writeHead(400)
+					response.end(`${error}`)
+					response.end()
+				} else {
+					//default, if successful will show 200
+					// response.writeHead(200, { "Content-type": "text/html" });
+					console.log(`Updated file with: ${parsedBody.message}`)
+					response.end(`Updated File::: ${parsedBody.message}`);
+				};
+			});
+			console.log(parsedBody)
+		})
+		
+	} 
+	else {
+		response.end();
 	}
 });
 
