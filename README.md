@@ -14,7 +14,7 @@ This is PRE-Express. Once we get to Express, this will not be steps needed to bu
 ### In Terminal
 First you will need to initialize/create the application. Create the directory where you would like this to live. Once you are in your new directory: 
 
-1. Run  ‘nmp init’
+1. Run  ‘npm init’
 2. Change Entry Point to "app.js"
 3. Enter till asked if correct (yes)
 4. Touch "app.js"
