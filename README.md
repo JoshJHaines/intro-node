@@ -57,7 +57,7 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 1. git init
 2. git add .
 3. git commit -m "first commit"
-4. git remote add origin https://github.com/'USERNAME'/'repo-name'.git [^2] 
+4. git remote add origin https://github.com/'USERNAME'/'repo-name'.git[^2] 
 
 
 
