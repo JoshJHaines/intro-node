@@ -39,7 +39,7 @@ console.log(`Server is now up and running @ port: ${port}`)
 This should give you what you need to have a sever and run it on port 3000 in your browser.
 
 ### In Terminal
-1. Run ‘node app.js’[^1] 
+1. Run ‘node app.js’[^1]
 
 
 ### Browser
@@ -57,7 +57,7 @@ This should give you what you need to have a sever and run it on port 3000 in yo
 1. git init
 2. git add .
 3. git commit -m "first commit"
-4. git remote add origin https://github.com/'USERNAME'/'repo-name'.git[^2] 
+4. git remote add origin https://github.com/'USERNAME'/'repo-name'.git [^2]
 
 
 
@@ -95,13 +95,13 @@ if (request.url === "/" && request.method === "GET") {
 ## CRUD
 
 - Create
-  - POST
+  - POST or add new entries
 - Read
-  - GET
+  - GET retrieve, search, or view existing entries
 - Update
-  - PUT
+  - PUT or edit existing entries
 - Delete
-  - DELETE
+  - DELETE deactivate, or remove existing entries
 
 ## Using Postman
 
