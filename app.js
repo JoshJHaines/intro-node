@@ -15,7 +15,7 @@ const port = 3000;
 
 const server = http.createServer(function (request, response) {
 	console.log(request.method)
-	if (request.url === "/"&& request.method === "GET") {
+	if (request.url === "/" && request.method === "GET") {
 		// response.end("Check back later for games details")
 		fs.readFile("text.txt", function (error, data) {
 			if (error) {
@@ -64,7 +64,8 @@ const server = http.createServer(function (request, response) {
 		request.on("end", function(){
 			let parsedBody = JSON.parse(body)
 
-			fs.appendFile(parsedBody.fileName, parsedBody.message,function (error) {
+			fs.appendFile(parsedBody.fileName, `\n${parsedBody.message}`,function (error) {
+				// \n will append the test to a new line
 				if (error){
 					response.writeHead(400)
 					response.end(`${error}`)
